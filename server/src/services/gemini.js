@@ -1,5 +1,7 @@
 import { getGeminiModel } from '../config/gemini.js';
 
+console.log('Gemini key:', process.env.GEMINI_API_KEY ? 'loaded' : 'MISSING')
+
 export async function analyzeWithGemini({ symbol, quote, summary, history, options }) {
   const model = getGeminiModel();
 
